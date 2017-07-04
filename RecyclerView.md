@@ -24,7 +24,7 @@ RecyclerViewとはカスタマイズ性の高いListViewである。
 
 ## コード
 __activity_main.xml__
-```Kotlin
+```xml
 // 省略
 
 <android.support.v7.widget.RecyclerView
