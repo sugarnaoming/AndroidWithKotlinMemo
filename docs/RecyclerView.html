@@ -1,0 +1,353 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>RecyclerView実装手順 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2" data-path="RecyclerView.html">
+            
+                <a href="RecyclerView.html">
+            
+                    
+                    RecyclerView実装手順
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >RecyclerView実装手順</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="recyclerview&#x624B;&#x9806;">RecyclerView&#x624B;&#x9806;</h1>
+<hr>
+<h2 id="&#x6982;&#x8981;">&#x6982;&#x8981;</h2>
+<p>RecyclerView&#x3068;&#x306F;&#x30AB;&#x30B9;&#x30BF;&#x30DE;&#x30A4;&#x30BA;&#x6027;&#x306E;&#x9AD8;&#x3044;ListView&#x3067;&#x3042;&#x308B;&#x3002;  </p>
+<blockquote>
+<p>RecyclerView&#x306F;ListView&#x306E;&#x4EE3;&#x66FF;&#x54C1;&#x3067;&#x306F;&#x7121;&#x3044;&#x306E;&#x3067;&#x3042;&#x3057;&#x304B;&#x3089;&#x305A;</p>
+</blockquote>
+<h2 id="recyclerview&#x5168;&#x4F53;&#x306E;&#x6D41;&#x308C;">RecyclerView&#x5168;&#x4F53;&#x306E;&#x6D41;&#x308C;</h2>
+<ol>
+<li>RecyclerView&#x306E;&#x53C2;&#x7167;&#x53D6;&#x5F97; -&gt; <code>findViewById(R.id.RECYCLER_VIEW_ID)</code></li>
+<li>RecyclerView&#x306E;LayoutManager&#x3092;&#x901A;&#x3057;&#x3066;Layout&#x306E;&#x6307;&#x5B9A;<blockquote>
+<ol>
+<li>&#x5FC5;&#x8981;&#x304C;&#x3042;&#x308C;&#x3070;Divider&#xFF08;&#x30EA;&#x30B9;&#x30C8;&#x306E;&#x533A;&#x5207;&#x308A;&#x7DDA;&#xFF09;&#x306E;&#x8A2D;&#x5B9A;</li>
+</ol>
+</blockquote>
+</li>
+<li>RecyclerView&#x306E;adapter&#x306B;RecyclerView.Adapter&#x3092;&#x7D99;&#x627F;&#x3057;&#x305F;&#x81EA;&#x4F5C;&#x30AF;&#x30E9;&#x30B9;&#x3092;&#x30BB;&#x30C3;&#x30C8;</li>
+</ol>
+<h2 id="recyclerview&#x306B;&#x5FC5;&#x8981;&#x306A;&#x3082;&#x306E;">RecyclerView&#x306B;&#x5FC5;&#x8981;&#x306A;&#x3082;&#x306E;</h2>
+<h3 id="class">Class</h3>
+<ul>
+<li>RecyclerView&#x3092;&#x547C;&#x3073;&#x51FA;&#x3059;&#x305F;&#x3081;&#x306E;&#x30A2;&#x30AF;&#x30C6;&#x30A3;&#x30D3;&#x30C6;&#x30A3;&#xFF08;&#x4ECA;&#x56DE;&#x306F;MainActivity&#xFF09;</li>
+<li>RecyclerView.Adapter&#x3092;&#x7D99;&#x627F;&#x3057;&#x305F;&#x30AF;&#x30E9;&#x30B9;<blockquote>
+<ul>
+<li>List&#x306E;&#x4E2D;&#x8EAB;&#x306E;&#x60C5;&#x5831;&#x3092;&#x4FDD;&#x5B58;&#x3059;&#x308B;RecyclerView.ViewHolder&#x3092;&#x7D99;&#x627F;&#x3057;&#x305F;ViewHolder&#x30AF;&#x30E9;&#x30B9;
+&#x5834;&#x5408;&#x306B;&#x3088;&#x3063;&#x3066;&#x306F;RecyclerView.Adapter&#x3092;&#x7D99;&#x627F;&#x3057;&#x305F;&#x30AF;&#x30E9;&#x30B9;&#x5185;&#x306B;private&#x30AF;&#x30E9;&#x30B9;&#x3067;&#x4F5C;&#x6210;&#x3057;&#x3066;&#x3082;&#x826F;&#x3044;</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<h3 id="xml">xml</h3>
+<ul>
+<li>List&#x306E;&#x4E2D;&#x8EAB;&#x306E;&#x30C7;&#x30B6;&#x30A4;&#x30F3;&#x3092;&#x898F;&#x5B9A;&#x3057;&#x305F;xml</li>
+<li>RecyclerView&#x306E;&#x30C7;&#x30B6;&#x30A4;&#x30F3;&#x3092;&#x898F;&#x5B9A;&#x3057;&#x305F;xml&#xFF08;&#x4ECA;&#x56DE;&#x306F;activity_main.xml&#xFF09;</li>
+</ul>
+<h2 id="&#x30B3;&#x30FC;&#x30C9;">&#x30B3;&#x30FC;&#x30C9;</h2>
+<p><strong>activity_main.xml</strong></p>
+<pre><code class="lang-Kotlin"><span class="hljs-comment">// &#x7701;&#x7565;</span>
+
+<span class="hljs-type">&lt;android.support.v7.widget.RecyclerView
+    android:id=&quot;@+id/recyclerView&quot;
+    android:layout_width=&quot;368dp&quot;
+    android:layout_height=&quot;match_parent&quot;
+    android:layout_gravity=&quot;center_vertical&quot;
+    android:layout_marginBottom=&quot;8dp&quot;
+    android:layout_marginLeft=&quot;8dp&quot;
+    android:layout_marginRight=&quot;8dp&quot;
+    android:layout_marginTop=&quot;8dp&quot;
+    app:layout_constraintBottom_toBottomOf=&quot;parent&quot;
+    app:layout_constraintHorizontal_bias=&quot;0.0&quot;
+    app:layout_constraintLeft_toLeftOf=&quot;parent&quot;
+    app:layout_constraintRight_toRightOf=&quot;parent&quot;
+    app:layout_constraintTop_toTopOf=&quot;parent&quot;&gt;</span>
+<span class="hljs-type">&lt;/android.support.v7.widget.RecyclerView&gt;</span>
+
+<span class="hljs-comment">// &#x7701;&#x7565;</span>
+</code></pre>
+<p><strong>MainActivity.kt</strong></p>
+<pre><code class="lang-Kotlin"><span class="hljs-comment">// &#x7701;&#x7565;</span>
+
+<span class="hljs-variable"><span class="hljs-keyword">val</span> items</span> = listOf(<span class="hljs-string">&quot;hoge&quot;</span>,<span class="hljs-string">&quot;foo&quot;</span>,<span class="hljs-string">&quot;bar&quot;</span>,<span class="hljs-string">&quot;piyo&quot;</span>)
+
+<span class="hljs-variable"><span class="hljs-keyword">val</span> recyclerView</span> = findViewById(R.id.recyclerView) <span class="hljs-keyword">as</span> RecyclerView
+<span class="hljs-comment">// RecyclerView&#x306E;&#x30B5;&#x30A4;&#x30BA;&#x3092;&#x7DAD;&#x6301;&#x3057;&#x7D9A;&#x3051;&#x308B;&#x8A2D;&#x5B9A;&#x3089;&#x3057;&#x3044;</span>
+<span class="hljs-comment">// RecyclerView&#x306E;&#x30B5;&#x30A4;&#x30BA;&#x304C;&#x56FA;&#x5B9A;&#x3067;&#x6C7A;&#x307E;&#x3063;&#x3066;&#x3044;&#x308B;&#x306A;&#x3089;true&#x306B;&#x3059;&#x308B;&#x306E;&#x304C;&#x826F;&#x3044;&#x3089;&#x3057;&#x3044;</span>
+recyclerView.setHasFixedSize(<span class="hljs-literal">true</span>)
+<span class="hljs-comment">// RecyclerView&#x5185;&#x306E;&#x8868;&#x793A;&#x5F62;&#x5F0F;&#x306B;LinearLayout&#x3092;&#x6307;&#x5B9A;</span>
+recyclerView.layoutManager = LinearLayoutManager(this)
+<span class="hljs-comment">// &#x533A;&#x5207;&#x308A;&#x7DDA;&#x306E;&#x8A2D;&#x5B9A;</span>
+<span class="hljs-variable"><span class="hljs-keyword">val</span> divider</span> = DividerItemDecoration(recyclerView.context, LinearLayoutManager(this).orientation)
+<span class="hljs-comment">// RecyclerView&#x306B;&#x533A;&#x5207;&#x308A;&#x7DDA;&#x3092;&#x8FFD;&#x52A0;</span>
+recyclerView.addItemDecoration(divider)
+<span class="hljs-comment">// RecylerViewAdapter&#x306F;&#x81EA;&#x4F5C;&#x30AF;&#x30E9;&#x30B9;&#x3067;&#x3059;&#x3002;&#x5F15;&#x6570;&#x306F;&#x9069;&#x5B9C;&#x5909;&#x66F4;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;</span>
+recyclerView.adapter = RecyclerViewAdapter(items)
+
+<span class="hljs-comment">// &#x7701;&#x7565;</span>
+</code></pre>
+<p><strong>RecyclerViewAdapter.kt</strong></p>
+<pre><code class="lang-Kotlin"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">RecyclerViewAdapter</span></span>(<span class="hljs-variable"><span class="hljs-keyword">val</span> items</span>: List<span class="hljs-type">&lt;ProductCodeEntity&gt;</span>): RecyclerView.Adapter<span class="hljs-type">&lt;RecyclerView.ViewHolder&gt;</span>() {
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">getItemCount</span><span class="hljs-params">()</span>: <span class="hljs-keyword">Int</span> { <span class="hljs-comment">// RecylerView&#x306E;&#x5B50;View&#x306E;&#x6570;&#x3092;&#x30AB;&#x30A6;&#x30F3;&#x30C8;&#x3059;&#x308B;</span></span>
+      <span class="hljs-keyword">return</span> items.size
+    }
+
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onBindViewHolder</span><span class="hljs-params">(holder: <span class="hljs-type">RecyclerView.ViewHolder?, position: Int</span>)</span> { <span class="hljs-comment">// &#x751F;&#x6210;&#x3057;&#x305F;ViewHolder&#x306B;&#x51E6;&#x7406;&#x3092;&#x884C;&#x3046;&#x90E8;&#x5206;</span></span>
+      <span class="hljs-comment">// holder&#x306F;&#x5358;&#x4E00;&#x306E;RecyclerView&#x306E;&#x5B50;&#x3092;&#x793A;&#x3057;&#x3066;&#x3044;&#x308B;</span>
+      (holder <span class="hljs-keyword">as</span> ViewHolder).itemText.text = items[position].title
+      <span class="hljs-comment">// &#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x30A4;&#x30D9;&#x30F3;&#x30C8;&#x306E;&#x8A2D;&#x5B9A;&#x306A;&#x3069;&#x3082;&#x3053;&#x3053;&#x3067;&#x884C;&#x3046;&#x3002;</span>
+    }
+
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onCreateViewHolder</span><span class="hljs-params">(parent: <span class="hljs-type">ViewGroup?, viewType: Int</span>)</span>: RecyclerView.ViewHolder { <span class="hljs-comment">// ViewHolder&#x306E;&#x751F;&#x6210;&#x90E8;&#x5206;</span></span>
+      <span class="hljs-comment">// RecyclerView&#x306B;&#x8868;&#x793A;&#x3059;&#x308B;&#x5B50;&#x306E;View&#x306E;&#x30EC;&#x30A4;&#x30A2;&#x30A6;&#x30C8;xml&#x304B;&#x3089;View&#x3092;&#x751F;&#x6210;</span>
+      <span class="hljs-comment">// &#x3053;&#x3053;&#x3067;&#x306F;list_item&#x3068;&#x3044;&#x3046;&#x540D;&#x79F0;</span>
+      <span class="hljs-variable"><span class="hljs-keyword">val</span> view</span>: View = LayoutInflater.from(parent?.context).inflate(R.layout.list_item, parent, <span class="hljs-literal">false</span>)
+      <span class="hljs-keyword">return</span> ViewHolder(view)
+    }
+}
+</code></pre>
+<p><strong>ViewHolder.kt</strong></p>
+<pre><code class="lang-Kotlin"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ViewHolder</span></span>(itemView: View?) : RecyclerView.ViewHolder(itemView) {
+  <span class="hljs-comment">// &#x4ECA;&#x56DE;&#x306E;ViewHolder&#x3067;&#x306F;item&#x306E;EditText&#x3092;&#x53C2;&#x7167;&#x3057;&#x3066;&#x3044;&#x308B;&#x3060;&#x3051;&#x3067;&#x3059;&#x3002;</span>
+  <span class="hljs-variable"><span class="hljs-keyword">val</span> itemText</span> = itemView?.findViewById<span class="hljs-type">&lt;View&gt;</span>(R.id.listItemText) <span class="hljs-keyword">as</span> TextView
+}
+</code></pre>
+<p><strong>list_item.xml</strong></p>
+<pre><code class="lang-xml"><span class="hljs-comment">&lt;!-- &#x7701;&#x7565; --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">LinearLayout</span> <span class="hljs-attr">xmlns:android</span>=<span class="hljs-string">&quot;http://schemas.android.com/apk/res/android&quot;</span>
+  <span class="hljs-attr">android:layout_width</span>=<span class="hljs-string">&quot;match_parent&quot;</span>
+  <span class="hljs-attr">android:layout_height</span>=<span class="hljs-string">&quot;wrap_content&quot;</span>
+  <span class="hljs-attr">android:orientation</span>=<span class="hljs-string">&quot;vertical&quot;</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">TextView</span>
+    <span class="hljs-attr">android:id</span>=<span class="hljs-string">&quot;@+id/listItemText&quot;</span>
+    <span class="hljs-attr">android:layout_width</span>=<span class="hljs-string">&quot;match_parent&quot;</span>
+    <span class="hljs-attr">android:layout_height</span>=<span class="hljs-string">&quot;50dp&quot;</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">LinearLayout</span>&gt;</span>
+</code></pre>
+<p>&#x3053;&#x3093;&#x306A;&#x611F;&#x3058;&#x3067;&#x884C;&#x3051;&#x305F;&#x306F;&#x305A;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Introduction">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"RecyclerView実装手順","level":"1.2","depth":1,"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"RecyclerView.md","mtime":"2017-07-04T01:37:22.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-04T01:38:17.644Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
