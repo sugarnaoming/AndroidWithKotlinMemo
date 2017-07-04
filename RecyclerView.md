@@ -6,10 +6,16 @@ RecyclerViewとはカスタマイズ性の高いListViewである。
 > RecyclerViewはListViewの代替品では無いのであしからず
 
 ## RecyclerView全体の流れ
+1. RecyclerViewを使うためのライブラリを入れる。
 1. RecyclerViewの参照取得 -> `findViewById(R.id.RECYCLER_VIEW_ID)`
 1. RecyclerViewのLayoutManagerを通してLayoutの指定
 > 1. 必要があればDivider（リストの区切り線）の設定
 1. RecyclerViewのadapterにRecyclerView.Adapterを継承した自作クラスをセット
+
+## ライブラリの入れ方
+ライブラリの入れ方には2通りある。
+- UIデザイン画面(xmlのデザイン画面)のPalletからRecyclerViewを追加すると。ライブラリを追加するか聞かれるのでyes
+- プロジェクトを右クリック -> Open Module Setting -> Dependenciesタブ -> 左下「＋」 -> Library Dependency -> recyclerview-v7
 
 ## RecyclerViewに必要なもの
 ### Class

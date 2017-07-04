@@ -159,6 +159,7 @@
 </blockquote>
 <h2 id="recyclerview&#x5168;&#x4F53;&#x306E;&#x6D41;&#x308C;">RecyclerView&#x5168;&#x4F53;&#x306E;&#x6D41;&#x308C;</h2>
 <ol>
+<li>RecyclerView&#x3092;&#x4F7F;&#x3046;&#x305F;&#x3081;&#x306E;&#x30E9;&#x30A4;&#x30D6;&#x30E9;&#x30EA;&#x3092;&#x5165;&#x308C;&#x308B;&#x3002;</li>
 <li>RecyclerView&#x306E;&#x53C2;&#x7167;&#x53D6;&#x5F97; -&gt; <code>findViewById(R.id.RECYCLER_VIEW_ID)</code></li>
 <li>RecyclerView&#x306E;LayoutManager&#x3092;&#x901A;&#x3057;&#x3066;Layout&#x306E;&#x6307;&#x5B9A;<blockquote>
 <ol>
@@ -168,6 +169,12 @@
 </li>
 <li>RecyclerView&#x306E;adapter&#x306B;RecyclerView.Adapter&#x3092;&#x7D99;&#x627F;&#x3057;&#x305F;&#x81EA;&#x4F5C;&#x30AF;&#x30E9;&#x30B9;&#x3092;&#x30BB;&#x30C3;&#x30C8;</li>
 </ol>
+<h2 id="&#x30E9;&#x30A4;&#x30D6;&#x30E9;&#x30EA;&#x306E;&#x5165;&#x308C;&#x65B9;">&#x30E9;&#x30A4;&#x30D6;&#x30E9;&#x30EA;&#x306E;&#x5165;&#x308C;&#x65B9;</h2>
+<p>&#x30E9;&#x30A4;&#x30D6;&#x30E9;&#x30EA;&#x306E;&#x5165;&#x308C;&#x65B9;&#x306B;&#x306F;2&#x901A;&#x308A;&#x3042;&#x308B;&#x3002;</p>
+<ul>
+<li>UI&#x30C7;&#x30B6;&#x30A4;&#x30F3;&#x753B;&#x9762;(xml&#x306E;&#x30C7;&#x30B6;&#x30A4;&#x30F3;&#x753B;&#x9762;)&#x306E;Pallet&#x304B;&#x3089;RecyclerView&#x3092;&#x8FFD;&#x52A0;&#x3059;&#x308B;&#x3068;&#x3002;&#x30E9;&#x30A4;&#x30D6;&#x30E9;&#x30EA;&#x3092;&#x8FFD;&#x52A0;&#x3059;&#x308B;&#x304B;&#x805E;&#x304B;&#x308C;&#x308B;&#x306E;&#x3067;yes</li>
+<li>&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x3092;&#x53F3;&#x30AF;&#x30EA;&#x30C3;&#x30AF; -&gt; Open Module Setting -&gt; Dependencies&#x30BF;&#x30D6; -&gt; &#x5DE6;&#x4E0B;&#x300C;&#xFF0B;&#x300D; -&gt; Library Dependency -&gt; recyclerview-v7</li>
+</ul>
 <h2 id="recyclerview&#x306B;&#x5FC5;&#x8981;&#x306A;&#x3082;&#x306E;">RecyclerView&#x306B;&#x5FC5;&#x8981;&#x306A;&#x3082;&#x306E;</h2>
 <h3 id="class">Class</h3>
 <ul>
@@ -290,7 +297,7 @@ recyclerView.adapter = RecyclerViewAdapter(items)
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"RecyclerView実装手順","level":"1.2","depth":1,"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"forkme.css"}},"file":{"path":"RecyclerView.md","mtime":"2017-07-04T02:35:03.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-04T02:37:19.819Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"RecyclerView実装手順","level":"1.2","depth":1,"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"forkme.css"}},"file":{"path":"RecyclerView.md","mtime":"2017-07-04T07:51:08.438Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-04T07:51:49.668Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
