@@ -1,3 +1,7 @@
+.body-inner {
+  overflow-x: hidden
+}
+
 .forkme {
   position: absolute;
   top: 40px;
