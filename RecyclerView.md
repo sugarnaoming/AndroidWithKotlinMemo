@@ -70,7 +70,7 @@ recyclerView.adapter = RecyclerViewAdapter(items)
 
 __RecyclerViewAdapter.kt__
 ```Kotlin
-class RecyclerViewAdapter(val items: List<ProductCodeEntity>): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class RecyclerViewAdapter(val items: List<String>): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     override fun getItemCount(): Int { // RecylerViewの子Viewの数をカウントする
       return items.size
     }
