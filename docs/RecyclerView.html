@@ -187,25 +187,25 @@
 </ul>
 <h2 id="&#x30B3;&#x30FC;&#x30C9;">&#x30B3;&#x30FC;&#x30C9;</h2>
 <p><strong>activity_main.xml</strong></p>
-<pre><code class="lang-Kotlin"><span class="hljs-comment">// &#x7701;&#x7565;</span>
+<pre><code class="lang-xml">// &#x7701;&#x7565;
 
-<span class="hljs-type">&lt;android.support.v7.widget.RecyclerView
-    android:id=&quot;@+id/recyclerView&quot;
-    android:layout_width=&quot;368dp&quot;
-    android:layout_height=&quot;match_parent&quot;
-    android:layout_gravity=&quot;center_vertical&quot;
-    android:layout_marginBottom=&quot;8dp&quot;
-    android:layout_marginLeft=&quot;8dp&quot;
-    android:layout_marginRight=&quot;8dp&quot;
-    android:layout_marginTop=&quot;8dp&quot;
-    app:layout_constraintBottom_toBottomOf=&quot;parent&quot;
-    app:layout_constraintHorizontal_bias=&quot;0.0&quot;
-    app:layout_constraintLeft_toLeftOf=&quot;parent&quot;
-    app:layout_constraintRight_toRightOf=&quot;parent&quot;
-    app:layout_constraintTop_toTopOf=&quot;parent&quot;&gt;</span>
-<span class="hljs-type">&lt;/android.support.v7.widget.RecyclerView&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">android.support.v7.widget.RecyclerView</span>
+    <span class="hljs-attr">android:id</span>=<span class="hljs-string">&quot;@+id/recyclerView&quot;</span>
+    <span class="hljs-attr">android:layout_width</span>=<span class="hljs-string">&quot;368dp&quot;</span>
+    <span class="hljs-attr">android:layout_height</span>=<span class="hljs-string">&quot;match_parent&quot;</span>
+    <span class="hljs-attr">android:layout_gravity</span>=<span class="hljs-string">&quot;center_vertical&quot;</span>
+    <span class="hljs-attr">android:layout_marginBottom</span>=<span class="hljs-string">&quot;8dp&quot;</span>
+    <span class="hljs-attr">android:layout_marginLeft</span>=<span class="hljs-string">&quot;8dp&quot;</span>
+    <span class="hljs-attr">android:layout_marginRight</span>=<span class="hljs-string">&quot;8dp&quot;</span>
+    <span class="hljs-attr">android:layout_marginTop</span>=<span class="hljs-string">&quot;8dp&quot;</span>
+    <span class="hljs-attr">app:layout_constraintBottom_toBottomOf</span>=<span class="hljs-string">&quot;parent&quot;</span>
+    <span class="hljs-attr">app:layout_constraintHorizontal_bias</span>=<span class="hljs-string">&quot;0.0&quot;</span>
+    <span class="hljs-attr">app:layout_constraintLeft_toLeftOf</span>=<span class="hljs-string">&quot;parent&quot;</span>
+    <span class="hljs-attr">app:layout_constraintRight_toRightOf</span>=<span class="hljs-string">&quot;parent&quot;</span>
+    <span class="hljs-attr">app:layout_constraintTop_toTopOf</span>=<span class="hljs-string">&quot;parent&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">android.support.v7.widget.RecyclerView</span>&gt;</span>
 
-<span class="hljs-comment">// &#x7701;&#x7565;</span>
+// &#x7701;&#x7565;
 </code></pre>
 <p><strong>MainActivity.kt</strong></p>
 <pre><code class="lang-Kotlin"><span class="hljs-comment">// &#x7701;&#x7565;</span>
@@ -290,7 +290,7 @@ recyclerView.adapter = RecyclerViewAdapter(items)
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"RecyclerView実装手順","level":"1.2","depth":1,"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"forkme.css"}},"file":{"path":"RecyclerView.md","mtime":"2017-07-04T01:37:22.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-04T01:45:06.529Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"RecyclerView実装手順","level":"1.2","depth":1,"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"forkme.css"}},"file":{"path":"RecyclerView.md","mtime":"2017-07-04T01:47:32.525Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-04T02:26:26.302Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
