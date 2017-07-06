@@ -1,5 +1,9 @@
 # RecyclerView手順
 ---
+## 注
+以下の説明はfragmentを使用しないRecyclerView実装の手順です。
+RecyclerViewの子Viewが変更するたびにRecyclerViewを新規生成してadapterにセットするのはやめましょう
+> fragmentを使うと綺麗に実装することができます。
 
 ## 概要
 RecyclerViewとはカスタマイズ性の高いListViewである。  
